@@ -33,9 +33,14 @@ document.body.appendChild(container);
 
 const hover = document.getElementsByClassName('box');
 
+const setColor = () => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+ }
+
 for(let k = 0; k < hover.length; k++){
     hover[k].addEventListener('mouseover', function(e){
-        e.target.style.background = 'black';
+        e.target.style.background = '#' + setColor();
     });
 };
 
